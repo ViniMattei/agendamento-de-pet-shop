@@ -1,0 +1,72 @@
+#modal{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  padding: 4.75rem 1.25rem 2rem;
+
+
+
+  &::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.01);
+    backdrop-filter: blur(.375rem);
+  }
+}
+
+#form{
+  background-color: var(--background-tertiary);
+  border-radius: .75rem;
+  position: relative;
+
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  max-width: 29.875rem;
+
+  & > .close-modal{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    background: none;
+  }
+
+  & .close-img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  & > header > p{
+    margin-top: .25rem;
+  }
+}
+
+.form-group{
+  display: grid;
+  gap: 1rem;
+  margin-block: 1.75rem;
+}
+
+button[type="submit"]{
+  display: block;
+  margin-left: auto;
+}
+
+@media screen and (width >= 1024px) {
+  #modal{
+    padding-block: 4.5rem;
+  }
+
+  #form{
+    padding-inline: 2.5rem;
+  }
+}

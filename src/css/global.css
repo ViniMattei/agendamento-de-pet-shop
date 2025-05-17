@@ -1,0 +1,130 @@
+@import url("./header.css");
+@import url("./form/inputs.css");
+@import url("./form/modal.css");
+@import url("./schedule.css");
+@import url("./footer.css");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
+  --content-tertiary: #666666;
+  --content-brand: #9282fa;
+
+  --background-primary: #151515;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #23242c;
+  --background-brand: #9282fa;
+  --background-highlights: #bdb4fa;
+
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
+  --border-divisor: #353339;
+
+  --accent-blue: #027df0;
+  --accent-blue-light: #16487a;
+  --accent-yellow: #f0dc02;
+  --accent-yellow-light: #756e1b;
+  --accent-orange: #f09102;
+  --accent-orange-light: #75501b;
+
+  --ff-base: "Inter", sans-serif;
+
+  --title: 700 1.5rem/2rem "Inter Tight", sans-serif;
+  --p-md: 500 0.875rem/1.5rem var(--ff-base);
+  --p-sm: 500 0.75rem/1rem var(--ff-base);
+  --label-lg: 700 1rem/1.5rem var(--ff-base);
+  --label-md: 700 0.875rem/1.5rem var(--ff-base);
+  --label-sm: 700 0.75rem/1rem var(--ff-base);
+}
+
+html,
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+
+  background-color: #14151d;
+  color: var(--content-primary);
+  font-family: var(--ff-base);
+}
+
+p {
+  color: var(--content-secondary);
+  font: var(--p-md);
+}
+
+a {
+  font: var(--link);
+  text-decoration: none;
+}
+
+h1 {
+  font: var(--title);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+button {
+  cursor: pointer;
+}
+
+.logo {
+  position: relative;
+  z-index: 100;
+}
+
+#app {
+  margin: 0.75rem auto 0;
+  padding: 0.75rem 1.25rem;
+
+  width: 100%;
+  max-width: 54.5rem;
+}
+
+.btn {
+  box-shadow: 0 0 2.5rem rgba(146, 130, 250, 0.3);
+  background-color: var(--content-brand);
+  border-radius: 8px;
+  color: #050505;
+
+  font: var(--label-lg);
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+
+  transition: background-color 0.3s ease-in-out, scale 0.3s;
+  &:hover {
+    background-color: var(--background-highlights);
+  }
+
+  &:focus {
+    outline: none;
+    scale: 1.1;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .logo {
+    position: fixed;
+  }
+
+  #app {
+    padding: 5rem;
+    margin-top: 0;
+  }
+}

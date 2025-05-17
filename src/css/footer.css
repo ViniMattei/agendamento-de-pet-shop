@@ -1,0 +1,18 @@
+.footer {
+  background-color: var(--background-tertiary);
+  padding-block: 1.125rem;
+  text-align: center;
+
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (width >= 1024px) {
+  .footer {
+    background-color: transparent;
+    padding: 0 2rem 2rem 0;
+    text-align: right;
+  }
+}

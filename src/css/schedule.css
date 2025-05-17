@@ -1,0 +1,102 @@
+.schedule {
+  display: grid;
+  gap: 0.875rem;
+  margin-top: 2rem;
+
+  & > :last-child {
+    margin-bottom: 6.25rem;
+  }
+}
+
+.schedule-period {
+  background-color: var(--background-tertiary);
+  border-radius: 0.625rem;
+
+  & > header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: 0.75rem 1.25rem;
+    border-bottom: 0.0625rem solid #2e2c30;
+
+    & > h2 {
+      font: var(--label-lg);
+      margin-right: auto;
+    }
+
+    & > span {
+      font: var(--label-lg);
+      color: var(--content-secondary);
+    }
+  }
+}
+
+.period {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+
+  & li {
+    padding: 0.75rem;
+
+    & strong {
+      font: var(--label-md);
+
+      & .hour {
+        margin-right: 0.75rem;
+      }
+    }
+
+    & span {
+      font: var(--p-md);
+      color: var(--content-secondary);
+
+      & .service-desc {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    & .remove {
+      display: block;
+      font: var(--p-sm);
+      margin-left: auto;
+
+      background: none;
+      color: var(--content-tertiary);
+
+      &:hover {
+        color: var(--content-primary);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & > li + li {
+    border-top: 0.0625rem solid var(--border-divisor);
+    padding-top: 1.75rem;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .schedule > :last-child {
+    margin-bottom: 0;
+  }
+
+  .period li {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1.45fr 1fr 1fr;
+
+    & span.service-desc {
+      margin-bottom: 0;
+      justify-self: flex-start;
+    }
+
+    & .remove {
+      margin: initial;
+      justify-self: flex-end;
+    }
+  }
+}
